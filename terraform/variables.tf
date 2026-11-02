@@ -1,23 +1,18 @@
-variable "aws_region" {
-  description = "AWS region for the demo infrastructure"
-  type        = string
-  default     = "ap-south-1"
-}
 
 variable "project_name" {
-  description = "Name used to tag resources"
+  description = "Name of the StockPilot project"
   type        = string
   default     = "stockpilot-inventory"
 }
 
-variable "instance_type" {
-  description = "EC2 instance type"
+variable "environment" {
+  description = "Deployment environment"
   type        = string
-  default     = "t3.micro"
+  default     = "Local Development"
 }
 
-variable "allowed_ssh_cidr" {
-  description = "Your public IP in CIDR format, for example 203.0.113.10/32. Keep the default to disable remote SSH access."
-  type        = string
-  default     = "127.0.0.1/32"
+variable "application_port" {
+  description = "Port used by the StockPilot application"
+  type        = number
+  default     = 5000
 }

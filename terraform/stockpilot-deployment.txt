@@ -1,0 +1,11 @@
+StockPilot Inventory Management System
+---------------------------------------
+Project: stockpilot-inventory
+Environment: Local Development
+Application: Flask
+Database: SQLite
+Containerization: Docker
+CI/CD: Jenkins
+Application Port: 5000
+
+Infrastructure provisioned using Terraform.

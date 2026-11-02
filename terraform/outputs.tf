@@ -1,13 +1,20 @@
-output "instance_public_ip" {
-  description = "Public IP of the demo EC2 instance"
-  value       = aws_instance.app.public_ip
+
+output "project_name" {
+  description = "StockPilot project name"
+  value       = var.project_name
 }
 
-output "application_url" {
-  description = "Application URL after you deploy the Docker container"
-  value       = "http://${aws_instance.app.public_ip}:5000"
+output "deployment_file" {
+  description = "Path of the Terraform-created deployment file"
+  value       = local_file.stockpilot_deployment.filename
 }
 
-output "security_group_id" {
-  value = aws_security_group.app.id
+output "application_port" {
+  description = "Application port"
+  value       = var.application_port
+}
+
+output "deployment_status" {
+  description = "Local infrastructure deployment status"
+  value       = "StockPilot local infrastructure provisioned successfully"
 }
