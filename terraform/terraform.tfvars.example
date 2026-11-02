@@ -1,0 +1,5 @@
+aws_region       = "ap-south-1"
+project_name     = "stockpilot-inventory"
+instance_type    = "t3.micro"
+# Replace with your own public IP/32 before enabling SSH. Do not use 0.0.0.0/0 for SSH.
+allowed_ssh_cidr = "127.0.0.1/32"
