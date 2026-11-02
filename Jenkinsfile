@@ -10,14 +10,13 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo 'Source code is checked out from the configured GitHub repository.'
+                echo 'Source code is checked out from GitHub.'
                 checkout scm
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                bat 'python -m pip install --upgrade pip'
                 bat 'python -m pip install -r requirements.txt'
             }
         }
